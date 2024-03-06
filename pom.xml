@@ -6,12 +6,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>mavenproject2-1.0-SNAPSHOT</name>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakartaee>10.0.0</jakartaee>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
@@ -20,7 +20,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -49,6 +49,18 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.7</version>
+            </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>heroku-releases</id>
+            <url>https://clojars.org/repo/</url>
+        </repository>
+    </repositories>
 </project>
